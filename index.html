@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robo-Maestro - Portale d'Accesso</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome per icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font Fredoka -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background-color: #ffffff;
+        }
+
+        @keyframes pulseGlowBoy {
+            0%, 100% { filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.4)); }
+            50% { filter: drop-shadow(0 0 30px rgba(99, 102, 241, 0.8)); }
+        }
+
+        @keyframes pulseGlowGirl {
+            0%, 100% { filter: drop-shadow(0 0 15px rgba(236, 72, 153, 0.4)); }
+            50% { filter: drop-shadow(0 0 30px rgba(236, 72, 153, 0.8)); }
+        }
+
+        .robot-glow-boy {
+            animation: pulseGlowBoy 3s infinite ease-in-out;
+        }
+
+        .robot-glow-girl {
+            animation: pulseGlowGirl 3s infinite ease-in-out;
+        }
+
+        .robot-card {
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .robot-card:hover {
+            transform: translateY(-12px) scale(1.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between items-center p-4 sm:p-8">
+
+    <!-- TITOLO PRINCIPALE -->
+    <header class="text-center mt-4 sm:mt-8">
+        <h1 class="text-3xl sm:text-5xl font-black text-slate-800 tracking-wide mb-2">
+            ROBO-MAESTRO 🚀 ROBO-MAESTRA
+        </h1>
+        <p class="text-sm sm:text-lg font-bold text-slate-500">
+            Scegli il tuo percorso di apprendimento sull'Intelligenza Artificiale!
+        </p>
+    </header>
+
+    <!-- CONTENITORE CENTRALE ROBOTTINI -->
+    <main class="w-full max-w-4xl my-auto py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center justify-items-center">
+
+            <!-- SCHEDA ROBOTTINO MASCHIO (IA & MACHINE LEARNING) -->
+            <div class="robot-card w-full max-w-sm bg-white rounded-3xl p-6 border-4 border-indigo-100 hover:border-indigo-400 shadow-xl hover:shadow-2xl flex flex-col items-center text-center group relative">
+                
+                <!-- Pulsante Audio Istruzioni (In alto a destra dell'immagine) -->
+                <button onclick="event.preventDefault(); event.stopPropagation(); speakText('Ciao! Sono Robo-Maestro. Clicca sul mio modulo per scoprire cos\'è l\'Intelligenza Artificiale, come impara il Machine Learning e giocare nella nostra palestra virtuale!', 'male')" 
+                        title="Ascolta le istruzioni"
+                        class="absolute top-4 right-4 z-10 w-11 h-11 bg-indigo-500 hover:bg-indigo-600 active:scale-95 text-white rounded-full flex items-center justify-center shadow-lg transition-all border-2 border-white hover:rotate-12">
+                    <i class="fa-solid fa-volume-high text-lg"></i>
+                </button>
+
+                <a href="https://fpicca318.github.io/roboMaestro/" target="_blank" rel="noopener noreferrer" class="w-full flex flex-col items-center">
+                    <!-- Avatar SVG Robottino -->
+                    <div class="w-48 h-48 sm:w-56 sm:h-56 relative my-2 robot-glow-boy">
+                        <svg viewBox="0 0 200 200" class="w-full h-full drop-shadow-xl">
+                            <!-- Antenna -->
+                            <rect x="92" y="8" width="16" height="24" fill="#64748B" rx="4"/>
+                            <circle cx="100" cy="10" r="10" fill="#EF4444" class="animate-pulse"/>
+
+                            <!-- Testa -->
+                            <rect x="35" y="30" width="130" height="90" fill="#4F46E5" rx="22" stroke="#3730A3" stroke-width="5"/>
+                            <rect x="48" y="42" width="104" height="66" fill="#1E293B" rx="14"/>
+
+                            <!-- Occhi -->
+                            <g id="robot-eyes">
+                                <circle cx="72" cy="70" r="15" fill="#38BDF8"/>
+                                <circle cx="75" cy="67" r="5" fill="#FFFFFF"/>
+                                <circle cx="128" cy="70" r="15" fill="#38BDF8"/>
+                                <circle cx="131" cy="67" r="5" fill="#FFFFFF"/>
+                            </g>
+
+                            <!-- Guance -->
+                            <circle cx="58" cy="85" r="7" fill="#F43F5E" opacity="0.7"/>
+                            <circle cx="142" cy="85" r="7" fill="#F43F5E" opacity="0.7"/>
+
+                            <!-- Bocca -->
+                            <path d="M 75 85 Q 100 95 125 85" fill="none" stroke="#38BDF8" stroke-width="6" stroke-linecap="round"/>
+
+                            <!-- Busto -->
+                            <path d="M 60 120 L 140 120 L 155 185 L 45 185 Z" fill="#6366F1" stroke="#3730A3" stroke-width="4"/>
+                            <circle cx="100" cy="150" r="16" fill="#F59E0B"/>
+                            <text x="93" y="156" font-size="16" fill="#FFF" font-weight="bold">⚡</text>
+                        </svg>
+                    </div>
+
+                    <div class="mt-4">
+                        <span class="inline-block bg-indigo-100 text-indigo-700 font-black text-xs px-3 py-1 rounded-full mb-2 border border-indigo-200">
+                            MODULO 1
+                        </span>
+                        <h2 class="text-2xl font-black text-indigo-950 group-hover:text-indigo-600 transition-colors">
+                            Robo-Maestro
+                        </h2>
+                        <p class="text-xs sm:text-sm font-semibold text-slate-500 mt-1">
+                            Scopri cos'è l'IA, come impara il Machine Learning e gioca nella palestra lab!
+                        </p>
+                    </div>
+
+                    <div class="mt-6 w-full bg-indigo-600 group-hover:bg-indigo-700 text-white font-black py-3 rounded-2xl shadow-lg transition-colors flex items-center justify-center gap-2 text-sm">
+                        <span>ENTRA NEL LABORATORIO</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- SCHEDA ROBOTTINA FEMMINA (SICUREZZA E PERICOLI DELLA RETE) -->
+            <div class="robot-card w-full max-w-sm bg-white rounded-3xl p-6 border-4 border-pink-100 hover:border-pink-400 shadow-xl hover:shadow-2xl flex flex-col items-center text-center group relative">
+                
+                <!-- Pulsante Audio Istruzioni (In alto a destra dell'immagine) -->
+                <button onclick="event.preventDefault(); event.stopPropagation(); speakText('Ciao! Sono Robo-Maestra. Clicca qui per imparare la sicurezza in rete, scoprire i tranelli delle fake news e delle immagini create con l\'Intelligenza Artificiale, e difenderti nella palestra scudo!', 'female')" 
+                        title="Ascolta le istruzioni"
+                        class="absolute top-4 right-4 z-10 w-11 h-11 bg-pink-500 hover:bg-pink-600 active:scale-95 text-white rounded-full flex items-center justify-center shadow-lg transition-all border-2 border-white hover:rotate-12">
+                    <i class="fa-solid fa-volume-high text-lg"></i>
+                </button>
+
+                <a href="https://fpicca318.github.io/roboMaestra/" target="_blank" rel="noopener noreferrer" class="w-full flex flex-col items-center">
+                    <!-- Avatar SVG Robottina -->
+                    <div class="w-48 h-48 sm:w-56 sm:h-56 relative my-2 robot-glow-girl">
+                        <svg viewBox="0 0 200 200" class="w-full h-full drop-shadow-xl">
+                            <!-- Fiocco Rosa Sulla Testa -->
+                            <g id="robot-bow">
+                                <path d="M 65 10 C 50 0, 45 25, 75 22 Z" fill="#EC4899" stroke="#BE185D" stroke-width="2"/>
+                                <path d="M 135 10 C 150 0, 155 25, 125 22 Z" fill="#EC4899" stroke="#BE185D" stroke-width="2"/>
+                                <circle cx="100" cy="18" r="8" fill="#F472B6" stroke="#BE185D" stroke-width="2"/>
+                            </g>
+
+                            <!-- Antenna -->
+                            <rect x="94" y="24" width="12" height="12" fill="#64748B" rx="2"/>
+
+                            <!-- Testa -->
+                            <rect x="35" y="32" width="130" height="90" fill="#EC4899" rx="22" stroke="#BE185D" stroke-width="5"/>
+                            <rect x="48" y="44" width="104" height="66" fill="#1E293B" rx="14"/>
+
+                            <!-- Ciglia e Occhi -->
+                            <g id="robot-girl-eyes">
+                                <!-- Ciglia Sinistra -->
+                                <path d="M 60 56 L 52 48 M 70 52 L 68 42 M 80 56 L 82 46" stroke="#F472B6" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="72" cy="72" r="14" fill="#F472B6"/>
+                                <circle cx="75" cy="69" r="5" fill="#FFFFFF"/>
+
+                                <!-- Ciglia Destra -->
+                                <path d="M 120 56 L 118 46 M 130 52 L 132 42 M 140 56 L 148 48" stroke="#F472B6" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="128" cy="72" r="14" fill="#F472B6"/>
+                                <circle cx="131" cy="69" r="5" fill="#FFFFFF"/>
+                            </g>
+
+                            <!-- Guance Rosa Ciclamino -->
+                            <circle cx="58" cy="88" r="8" fill="#FB7185" opacity="0.8"/>
+                            <circle cx="142" cy="88" r="8" fill="#FB7185" opacity="0.8"/>
+
+                            <!-- Bocca sorridente -->
+                            <path d="M 75 90 Q 100 110 125 90" fill="none" stroke="#F472B6" stroke-width="5" stroke-linecap="round"/>
+
+                            <!-- Busto -->
+                            <path d="M 60 122 L 140 122 L 155 185 L 45 185 Z" fill="#F472B6" stroke="#BE185D" stroke-width="4"/>
+                            <!-- Collana / Dettaglio Cuore -->
+                            <circle cx="100" cy="150" r="15" fill="#FFF"/>
+                            <text x="91" y="156" font-size="14">💖</text>
+                        </svg>
+                    </div>
+
+                    <div class="mt-4">
+                        <span class="inline-block bg-pink-100 text-pink-700 font-black text-xs px-3 py-1 rounded-full mb-2 border border-pink-200">
+                            MODULO 2
+                        </span>
+                        <h2 class="text-2xl font-black text-indigo-950 group-hover:text-pink-600 transition-colors">
+                            Robo-Maestra
+                        </h2>
+                        <p class="text-xs sm:text-sm font-semibold text-slate-500 mt-1">
+                            Sicurezza in rete, fake news, tranelli dell'IA, gioco detective e palestra scudo!
+                        </p>
+                    </div>
+
+                    <div class="mt-6 w-full bg-pink-500 group-hover:bg-pink-600 text-white font-black py-3 rounded-2xl shadow-lg transition-colors flex items-center justify-center gap-2 text-sm">
+                        <span>ENTRA NEL LABORATORIO</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="text-center text-xs font-bold text-slate-400 py-4">
+        FrancescoPicca@2026 🤖 Progetto Didattico "Robo-Maestr@"
+    </footer>
+
+    <!-- SCRIPT WEB SPEECH API PER VOCE MASCHILE / FEMMINILE -->
+    <script>
+        let synth = window.speechSynthesis;
+        let voices = [];
+
+        function loadVoices() {
+            if (typeof speechSynthesis !== 'undefined') {
+                voices = speechSynthesis.getVoices();
+            }
+        }
+
+        loadVoices();
+        if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
+            speechSynthesis.onvoiceschanged = loadVoices;
+        }
+
+        function speakText(text, gender) {
+            if (!('speechSynthesis' in window)) {
+                return;
+            }
+
+            // Interrompe eventuali sintesi vocali in corso
+            synth.cancel();
+
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'it-IT';
+
+            // Recupera tutte le voci italiane disponibili
+            const italianVoices = voices.filter(v => v.lang.includes('it') || v.lang.includes('IT'));
+
+            if (gender === 'female') {
+                utterance.pitch = 1.3; // Tono leggermente più acuto per la robottina
+                utterance.rate = 1.0;
+                // Cerca una voce femminile o la prima voce italiana
+                const femaleVoice = italianVoices.find(v => v.name.toLowerCase().includes('elsa') || v.name.toLowerCase().includes('alice') || v.name.toLowerCase().includes('federica') || v.name.toLowerCase().includes('female'));
+                if (femaleVoice) utterance.voice = femaleVoice;
+            } else {
+                utterance.pitch = 0.85; // Tono più profondo/maschile per il robottino
+                utterance.rate = 0.95;
+                // Cerca una voce maschile o usa il pitch modificato
+                const maleVoice = italianVoices.find(v => v.name.toLowerCase().includes('cosimo') || v.name.toLowerCase().includes('diego') || v.name.toLowerCase().includes('male'));
+                if (maleVoice) utterance.voice = maleVoice;
+            }
+
+            synth.speak(utterance);
+        }
+    </script>
+</body>
+</html>
