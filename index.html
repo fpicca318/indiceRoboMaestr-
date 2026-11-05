@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robo-Maestr@ & RoboProf - Portale d'Accesso</title>
+    <title>Robo-Maestr@, RoboProf & RoboProfssa - Portale d'Accesso</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -33,6 +33,11 @@
             50% { filter: drop-shadow(0 0 30px rgba(16, 185, 129, 0.8)); }
         }
 
+        @keyframes pulseGlowProfssa {
+            0%, 100% { filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.4)); }
+            50% { filter: drop-shadow(0 0 30px rgba(168, 85, 247, 0.8)); }
+        }
+
         .robot-glow-boy {
             animation: pulseGlowBoy 3s infinite ease-in-out;
         }
@@ -43,6 +48,10 @@
 
         .robot-glow-prof {
             animation: pulseGlowProf 3s infinite ease-in-out;
+        }
+
+        .robot-glow-profssa {
+            animation: pulseGlowProfssa 3s infinite ease-in-out;
         }
 
         .robot-card {
@@ -59,16 +68,16 @@
     <!-- TITOLO PRINCIPALE -->
     <header class="text-center mt-2 sm:mt-6">
         <h1 class="text-2xl sm:text-4xl md:text-5xl font-black text-slate-800 tracking-wide mb-2">
-            ROBO-MAESTRO 🚀 ROBO-MAESTRA 🎓 ROBOPROF
+            ROBO-MAESTRO 🚀 ROBO-MAESTRA 🎓 ROBOPROF 🛡️ ROBOPROFSSA
         </h1>
         <p class="text-sm sm:text-lg font-bold text-slate-500">
-            Scegli il tuo percorso di apprendimento sull'Intelligenza Artificiale!
+            Scegli il tuo percorso di apprendimento sull'Intelligenza Artificiale e la Sicurezza Digitale!
         </p>
     </header>
 
     <!-- CONTENITORE CENTRALE ROBOTTINI -->
-    <main class="w-full max-w-6xl my-auto py-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch justify-items-center">
+    <main class="w-full max-w-7xl my-auto py-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 items-stretch justify-items-center">
 
             <!-- SCHEDA 1: ROBOTTINO MASCHIO (IA & MACHINE LEARNING) -->
             <div class="robot-card w-full max-w-sm bg-white rounded-3xl p-6 border-4 border-indigo-100 hover:border-indigo-400 shadow-xl hover:shadow-2xl flex flex-col justify-between text-center group relative">
@@ -83,7 +92,7 @@
                 <a href="https://fpicca318.github.io/roboMaestro/" target="_blank" rel="noopener noreferrer" class="w-full flex flex-col items-center h-full justify-between">
                     <div>
                         <!-- Avatar SVG Robottino -->
-                        <div class="w-44 h-44 sm:w-48 sm:h-48 relative my-2 mx-auto robot-glow-boy">
+                        <div class="w-40 h-40 sm:w-44 sm:h-44 relative my-2 mx-auto robot-glow-boy">
                             <svg viewBox="0 0 200 200" class="w-full h-full drop-shadow-xl">
                                 <!-- Antenna -->
                                 <rect x="92" y="8" width="16" height="24" fill="#64748B" rx="4"/>
@@ -148,7 +157,7 @@
                 <a href="https://fpicca318.github.io/roboMaestra/" target="_blank" rel="noopener noreferrer" class="w-full flex flex-col items-center h-full justify-between">
                     <div>
                         <!-- Avatar SVG Robottina -->
-                        <div class="w-44 h-44 sm:w-48 sm:h-48 relative my-2 mx-auto robot-glow-girl">
+                        <div class="w-40 h-40 sm:w-44 sm:h-44 relative my-2 mx-auto robot-glow-girl">
                             <svg viewBox="0 0 200 200" class="w-full h-full drop-shadow-xl">
                                 <!-- Fiocco Rosa Sulla Testa -->
                                 <g id="robot-bow">
@@ -223,7 +232,7 @@
                 <a href="https://fpicca318.github.io/roboProf/" target="_blank" rel="noopener noreferrer" class="w-full flex flex-col items-center h-full justify-between">
                     <div>
                         <!-- Avatar SVG RoboProf (Professore giovanile e disponibile) -->
-                        <div class="w-44 h-44 sm:w-48 sm:h-48 relative my-2 mx-auto robot-glow-prof">
+                        <div class="w-40 h-40 sm:w-44 sm:h-44 relative my-2 mx-auto robot-glow-prof">
                             <svg viewBox="0 0 200 200" class="w-full h-full drop-shadow-xl">
                                 <!-- Cappello Laurea / Tocco Giovanile di sbieco -->
                                 <g id="prof-cap">
@@ -292,15 +301,93 @@
                 </a>
             </div>
 
+            <!-- SCHEDA 4: ROBOPROFSSA (PROFESSORESSA GIOVANILE, DISPONIBILE & ESPERTA DI SICUREZZA RETE/IA) -->
+            <div class="robot-card w-full max-w-sm bg-white rounded-3xl p-6 border-4 border-purple-100 hover:border-purple-400 shadow-xl hover:shadow-2xl flex flex-col justify-between text-center group relative">
+                
+                <!-- Pulsante Audio Istruzioni -->
+                <button onclick="event.preventDefault(); event.stopPropagation(); speakText('Ciao ragazze e ragazzi! Sono la RoboProfssa. Cliccate qui per scoprire insieme a me come navigare sicuri in rete e proteggerci dai rischi dell\'Intelligenza Artificiale!', 'profssa')" 
+                        title="Ascolta le istruzioni"
+                        class="absolute top-4 right-4 z-10 w-11 h-11 bg-purple-500 hover:bg-purple-600 active:scale-95 text-white rounded-full flex items-center justify-center shadow-lg transition-all border-2 border-white hover:rotate-12">
+                    <i class="fa-solid fa-volume-high text-lg"></i>
+                </button>
+
+                <a href="https://fpicca318.github.io/roboProfssa/" target="_blank" rel="noopener noreferrer" class="w-full flex flex-col items-center h-full justify-between">
+                    <div>
+                        <!-- Avatar SVG RoboProfssa (Professoressa giovanile e disponibile) -->
+                        <div class="w-40 h-40 sm:w-44 sm:h-44 relative my-2 mx-auto robot-glow-profssa">
+                            <svg viewBox="0 0 200 200" class="w-full h-full drop-shadow-xl">
+                                <!-- Acconciatura / Capelli stilizzati giovanili con coda -->
+                                <g id="profssa-hair">
+                                    <path d="M 30 50 C 30 15, 170 15, 170 50 C 170 65, 160 70, 160 50 C 140 25, 60 25, 40 50 Z" fill="#8B5CF6"/>
+                                    <!-- Coda laterale moderna -->
+                                    <path d="M 160 45 C 185 40, 195 70, 175 90 C 165 80, 160 65, 160 45 Z" fill="#7C3AED"/>
+                                    <circle cx="160" cy="48" r="5" fill="#F43F5E"/>
+                                </g>
+
+                                <!-- Antenna con scudo di sicurezza -->
+                                <path d="M 100 25 L 100 10" stroke="#64748B" stroke-width="4" stroke-linecap="round"/>
+                                <circle cx="100" cy="8" r="7" fill="#A855F7" class="animate-pulse"/>
+
+                                <!-- Testa Robottino Profssa -->
+                                <rect x="35" y="36" width="130" height="88" fill="#9333EA" rx="22" stroke="#6B21A8" stroke-width="5"/>
+                                <rect x="48" y="48" width="104" height="64" fill="#0F172A" rx="14"/>
+
+                                <!-- Occhiali moderni trasparenti/trendy -->
+                                <g id="profssa-glasses">
+                                    <!-- Occhiale Sinistro Cat-eye / Trendy -->
+                                    <path d="M 52 60 L 92 65 L 88 84 L 56 80 Z" fill="none" stroke="#EC4899" stroke-width="3"/>
+                                    <circle cx="72" cy="72" r="12" fill="#38BDF8" opacity="0.9"/>
+                                    <circle cx="75" cy="68" r="4" fill="#FFFFFF"/>
+
+                                    <!-- Ponte Occhiali -->
+                                    <line x1="92" y1="65" x2="108" y2="65" stroke="#EC4899" stroke-width="3"/>
+
+                                    <!-- Occhiale Destro -->
+                                    <path d="M 148 60 L 108 65 L 112 84 L 144 80 Z" fill="none" stroke="#EC4899" stroke-width="3"/>
+                                    <circle cx="128" cy="72" r="12" fill="#38BDF8" opacity="0.9"/>
+                                    <circle cx="131" cy="68" r="4" fill="#FFFFFF"/>
+                                </g>
+
+                                <!-- Sorriso amichevole e aperto -->
+                                <path d="M 74 94 Q 100 114 126 94" fill="none" stroke="#F472B6" stroke-width="5" stroke-linecap="round"/>
+
+                                <!-- Busto con Giacchetta Smart / Maglia -->
+                                <path d="M 55 124 L 145 124 L 160 185 L 40 185 Z" fill="#7E22CE" stroke="#581C87" stroke-width="4"/>
+                                <!-- Scudo di protezione della Rete sul petto -->
+                                <path d="M 100 138 L 115 145 V 160 C 115 170 100 176 100 176 C 100 176 85 170 85 160 V 145 Z" fill="#F59E0B" stroke="#FFFFFF" stroke-width="2"/>
+                                <text x="94" y="163" font-size="12" fill="#FFF">🔒</text>
+                            </svg>
+                        </div>
+
+                        <div class="mt-4">
+                            <span class="inline-block bg-purple-100 text-purple-800 font-black text-xs px-3 py-1 rounded-full mb-2 border border-purple-200">
+                                MODULO 4
+                            </span>
+                            <h2 class="text-2xl font-black text-indigo-950 group-hover:text-purple-600 transition-colors">
+                                RoboProfssa
+                            </h2>
+                            <p class="text-xs sm:text-sm font-semibold text-slate-500 mt-1">
+                                Guida esperta sui pericoli della rete, uso consapevole dell'IA e sicurezza digitale!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 w-full bg-purple-600 group-hover:bg-purple-700 text-white font-black py-3 rounded-2xl shadow-lg transition-colors flex items-center justify-center gap-2 text-sm">
+                        <span>ENTRA NELL'AULA</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+
         </div>
     </main>
 
     <!-- FOOTER -->
     <footer class="text-center text-xs font-bold text-slate-400 py-4">
-        FrancescoPicca@2026 🤖 Progetto Didattico "Robo-Maestr@ & RoboProf"
+        FrancescoPicca@2026 🤖 Progetto Didattico "Robo-Maestr@, RoboProf & RoboProfssa"
     </footer>
 
-    <!-- SCRIPT WEB SPEECH API PER VOCE MASCHILE / FEMMINILE / PROF -->
+    <!-- SCRIPT WEB SPEECH API PER VOCE MASCHILE / FEMMINILE / PROF / PROFSSA -->
     <script>
         let synth = window.speechSynthesis;
         let voices = [];
@@ -335,6 +422,11 @@
                 utterance.rate = 1.0;
                 const femaleVoice = italianVoices.find(v => v.name.toLowerCase().includes('elsa') || v.name.toLowerCase().includes('alice') || v.name.toLowerCase().includes('federica') || v.name.toLowerCase().includes('female'));
                 if (femaleVoice) utterance.voice = femaleVoice;
+            } else if (role === 'profssa') {
+                utterance.pitch = 1.15; // Tono caldo, empatico, giovanile ed espressivo
+                utterance.rate = 1.0;
+                const profssaVoice = italianVoices.find(v => v.name.toLowerCase().includes('alice') || v.name.toLowerCase().includes('elsa') || v.name.toLowerCase().includes('federica') || v.name.toLowerCase().includes('female'));
+                if (profssaVoice) utterance.voice = profssaVoice;
             } else if (role === 'prof') {
                 utterance.pitch = 1.0; // Tono giovanile, brillante e amichevole
                 utterance.rate = 1.02;
